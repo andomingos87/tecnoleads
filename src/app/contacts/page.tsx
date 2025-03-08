@@ -97,10 +97,24 @@ const statusLabels = {
   inactive: 'Inativo'
 };
 
+// Primeiro, defina a interface para o contato
+interface Contact {
+  id: number;
+  name: string;
+  company: string;
+  email: string;
+  phone: string;
+  status: string;
+  lastContact: string;
+  city: string;
+  state: string;
+  hasDeals?: boolean;
+}
+
 export default function ContactsPage() {
   const [viewMode, setViewMode] = useState<'list' | 'kanban'>('list');
   const [selectedContacts, setSelectedContacts] = useState<number[]>([]);
-  const [selectedContact, setSelectedContact] = useState(null);
+  const [selectedContact, setSelectedContact] = useState<Contact | null>(null);
   const [filters, setFilters] = useState({
     search: '',
     city: '',
@@ -110,7 +124,7 @@ export default function ContactsPage() {
   const [sorting, setSorting] = useState({ field: '', direction: 'asc' });
   const [isStatusDialogOpen, setIsStatusDialogOpen] = useState(false);
   const [isTaskDialogOpen, setIsTaskDialogOpen] = useState(false);
-  const [selectedContactForAction, setSelectedContactForAction] = useState(null);
+  const [selectedContactForAction, setSelectedContactForAction] = useState<Contact | null>(null);
 
   // Verifica se há algum filtro ativo
   const hasActiveFilters = Object.values(filters).some(value => value !== '');
@@ -161,8 +175,11 @@ export default function ContactsPage() {
   };
 
   const handleCreateTask = (contactId: number) => {
-    setSelectedContactForAction(leads.find(lead => lead.id === contactId));
-    setIsTaskDialogOpen(true);
+    const contact = leads.find(lead => lead.id === contactId);
+    if (contact) {
+      setSelectedContactForAction(contact);
+      setIsTaskDialogOpen(true);
+    }
   };
 
   const handleSubmitTask = (data: any) => {
