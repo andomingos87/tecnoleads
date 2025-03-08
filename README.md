@@ -1,36 +1,61 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Tecnoleads CRM
 
-## Getting Started
+Sistema de CRM desenvolvido para gestão de leads e negócios.
 
-First, run the development server:
+## Tecnologias Utilizadas
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+- Next.js 14
+- TypeScript
+- Tailwind CSS
+- Lucide React (ícones)
+
+## Estrutura do Projeto
+
+```
+src/
+├── components/
+│   ├── layout/      # Componentes de layout (sidebar, header)
+│   ├── features/    # Componentes específicos de features
+│   └── shared/      # Componentes compartilhados
+├── app/            # Páginas e rotas da aplicação
+├── assets/         # Arquivos estáticos
+├── styles/         # Estilos e configurações do Tailwind
+├── hooks/          # Hooks personalizados
+└── utils/          # Funções utilitárias
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Instalação
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+1. Clone o repositório
+2. Instale as dependências:
+```bash
+npm install
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+3. Inicie o servidor de desenvolvimento:
+```bash
+npm run dev
+```
 
-## Learn More
+4. Acesse http://localhost:3000
 
-To learn more about Next.js, take a look at the following resources:
+## Funcionalidades
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+- Dashboard com visão geral de leads e negócios
+- Gestão de contatos
+- Gestão de tarefas
+- Relatórios e métricas
+- Configurações do sistema
+- Perfil de usuário
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## Cores do Tema
 
-## Deploy on Vercel
+- Primary: `#00167a` (Deep corporate blue)
+- Secondary: `#d10413` (Vibrant red)
+- Accent: `#ffb400` (Rich golden-yellow)
+- Success: `#16a34a` (Fresh green)
+- Background: `#f5f7fa` (Soft neutral grey)
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## Licença
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Este projeto está sob a licença MIT. # tecnoleads
