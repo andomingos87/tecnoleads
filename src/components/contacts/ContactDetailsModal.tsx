@@ -18,11 +18,12 @@ import {
   Share2
 } from 'lucide-react';
 import { Button } from '@/components/ui/button';
+import { Contact } from '@/types/contact';
 
 interface ContactDetailsModalProps {
   isOpen: boolean;
   onClose: () => void;
-  contact: any; // Tipagem completa será adicionada posteriormente
+  contact: Contact | null;
 }
 
 export function ContactDetailsModal({ isOpen, onClose, contact }: ContactDetailsModalProps) {

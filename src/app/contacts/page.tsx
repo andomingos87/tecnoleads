@@ -18,6 +18,7 @@ import {
   Briefcase,
   CalendarClock
 } from 'lucide-react';
+import { Contact } from '@/types/contact';
 import { ContactDetailsModal } from '@/components/contacts/ContactDetailsModal';
 import { ContactsKanban } from '@/components/contacts/ContactsKanban';
 import {
@@ -46,7 +47,7 @@ import {
 } from "@/components/ui/dialog";
 
 // Mock data - substituir por dados reais da API
-const leads = [
+const leads: Contact[] = [
   { 
     id: 1,
     name: 'Maria Silva',
@@ -96,20 +97,6 @@ const statusLabels = {
   qualified: 'Qualificado',
   inactive: 'Inativo'
 };
-
-// Primeiro, defina a interface para o contato
-interface Contact {
-  id: number;
-  name: string;
-  company: string;
-  email: string;
-  phone: string;
-  status: string;
-  lastContact: string;
-  city: string;
-  state: string;
-  hasDeals?: boolean;
-}
 
 export default function ContactsPage() {
   const [viewMode, setViewMode] = useState<'list' | 'kanban'>('list');
@@ -444,7 +431,7 @@ export default function ContactsPage() {
           <div className="p-4">
             <ContactsKanban
               contacts={leads}
-              onContactClick={setSelectedContact}
+              onContactClick={(contact: Contact) => setSelectedContact(contact)}
               onStatusChange={handleStatusChange}
             />
           </div>

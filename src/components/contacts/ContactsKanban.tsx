@@ -8,18 +8,7 @@ import {
   DropdownMenuItem,
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
-
-interface Contact {
-  id: number;
-  name: string;
-  company: string;
-  email: string;
-  phone: string;
-  status: string;
-  lastContact: string;
-  city?: string;
-  state?: string;
-}
+import { Contact } from '@/types/contact';
 
 interface ContactsKanbanProps {
   contacts: Contact[];
