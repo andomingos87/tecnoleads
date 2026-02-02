@@ -1,0 +1,1 @@
+Apenas me responda no chat.
