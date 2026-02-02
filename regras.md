@@ -131,7 +131,10 @@
 - Criado via script direto no banco;
 - Cadastra os primeiros Admins e pode cadastrar todos tipos de usuarios;
 - Futuro: acesso a dados e funcoes exclusivas;
-- 
+
+## Autenticacao e permissoes (MVP)
+- Roles persistidas na tabela de perfis (coluna `role`) e expostas como claim no JWT para checagens no app;
+- RLS no banco como regra principal de acesso; middleware/guards no app apenas para UX e navegacao.
 
 ## Cadastro de usuarios
 *Marcados com * sao obrigatorios*

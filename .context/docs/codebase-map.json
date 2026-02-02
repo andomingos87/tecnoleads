@@ -1,0 +1,67 @@
+{
+  "version": "1.0.0",
+  "generated": "2026-02-02T00:32:45.372Z",
+  "stack": {
+    "primaryLanguage": null,
+    "languages": [],
+    "frameworks": [],
+    "buildTools": [],
+    "testFrameworks": [],
+    "packageManager": null,
+    "isMonorepo": false,
+    "hasDocker": false,
+    "hasCI": false
+  },
+  "structure": {
+    "totalFiles": 5,
+    "topDirectories": [
+      {
+        "name": "backlog_mvp.md",
+        "fileCount": 1
+      },
+      {
+        "name": "design_spec.md",
+        "fileCount": 1
+      },
+      {
+        "name": "prd.md",
+        "fileCount": 1
+      },
+      {
+        "name": "regras.md",
+        "fileCount": 1
+      },
+      {
+        "name": "stack.md",
+        "fileCount": 1
+      }
+    ],
+    "languageDistribution": [
+      {
+        "extension": ".md",
+        "count": 5
+      }
+    ]
+  },
+  "architecture": {
+    "layers": [],
+    "patterns": [],
+    "entryPoints": []
+  },
+  "symbols": {
+    "classes": [],
+    "interfaces": [],
+    "functions": [],
+    "types": [],
+    "enums": []
+  },
+  "publicAPI": [],
+  "dependencies": {
+    "mostImported": []
+  },
+  "stats": {
+    "totalSymbols": 0,
+    "exportedSymbols": 0,
+    "analysisTimeMs": 9
+  }
+}
